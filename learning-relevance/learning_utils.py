@@ -81,7 +81,7 @@ def plot_model_accuracy(model,x_test,y_test,ax,threshold=0.1,inv=False):
     )
     ax.scatter(
         np.arange(len(prob_y_true)),
-        y_test[order],
+        y_test.reset_index(drop=True)[order],
         s=2
     )
     if inv:
